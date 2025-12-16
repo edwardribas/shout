@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    func something() {
-        print("teste")
-    }
-    
     var body: some View {
         TabView(){
             Tab("Profile", systemImage: "person") {

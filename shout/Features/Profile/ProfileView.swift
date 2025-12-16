@@ -17,7 +17,7 @@ struct ProfileView: View {
     var numberOfRecordings = String(2083)
     
     var body: some View {
-        NavigationStack{        
+        NavigationStack{
             ScrollView{
                 VStack(spacing: 20) {
                     HStack(alignment: .center, spacing: 20){
@@ -38,23 +38,54 @@ struct ProfileView: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     
-                    Text(description)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                        .background(.ultraThinMaterial)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                    VStack{
+                        Text(description)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                            .background(.ultraThinMaterial)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                        
+                        HStack() {
+                            ProfileInformation(label: "Followers", value: numberOfFollowers)
+                            ProfileInformation(label: "Following", value: numberOfFollowing)
+                            ProfileInformation(label: "Recordings", value: numberOfRecordings)
+                        }                        
+                    }
                 }
                 .padding()
                 .toolbar{
                     ToolbarItemGroup{
-                        Button("Options", systemImage: "ellipsis", action: { print("options")})
-                            .labelStyle(.iconOnly)
+                        Button("Options", systemImage: "ellipsis"){
+                            print("options")
+                        }
+                        .labelStyle(.iconOnly)
                         
-                        Button("Share", systemImage: "square.and.arrow.up", action: { print("share")})
-                            .labelStyle(.iconOnly)
+                        Button("Share", systemImage: "square.and.arrow.up"){
+                            print("share")
+                        }
+                        .labelStyle(.iconOnly)
                     }
                 }
             }
         }
+    }
+}
+
+struct ProfileInformation: View {
+    var label: String
+    var value: String
+    
+    var body: some View {
+        VStack(spacing: 6){
+            Text(value)
+                .font(.headline)
+            
+            Text(label)
+                .font(.subheadline)
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
+        .background(.ultraThinMaterial)
+        .clipShape(RoundedRectangle(cornerRadius: 20))
     }
 }
