@@ -13,31 +13,19 @@ struct ContentView: View {
     }
     
     var body: some View {
-        NavigationStack {
-            TabView(){
-                Tab("Profile", systemImage: "person") {
-                    ProfileView()
-                }
-                
-                Tab("Feed", systemImage: "house.fill") {
-                    FeedView()
-                }
-                
-                Tab("Songbook", systemImage: "music.note") {
-                    SongbookView()
-                }
+        TabView(){
+            Tab("Profile", systemImage: "person") {
+                ProfileView()
             }
-            .toolbar{
-                ToolbarItemGroup{
-                    Button("Options", systemImage: "ellipsis", action: { print("options")})
-                        .labelStyle(.iconOnly)
-                    
-                    Button("Share", systemImage: "square.and.arrow.up", action: { print("share")})
-                        .labelStyle(.iconOnly)
-                }
+            
+            Tab("Feed", systemImage: "house.fill") {
+                FeedView()
+            }
+            
+            Tab("Songbook", systemImage: "music.note") {
+                SongbookView()
             }
         }
-        
     }
 }
 
