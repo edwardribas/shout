@@ -17,8 +17,8 @@ struct ProfileView: View {
     var numberOfRecordings = String(2083)
     
     var body: some View {
-        NavigationStack{
-            ScrollView {
+        NavigationStack{        
+            ScrollView(.vertical) {
                 VStack(spacing: 20) {
                     HStack(alignment: .center, spacing: 20){
                         AsyncImage(url: pictureUrl){ image in
@@ -44,15 +44,15 @@ struct ProfileView: View {
                         .background(.ultraThinMaterial)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                 }
-            }
-            .padding()
-            .toolbar{
-                ToolbarItemGroup{
-                    Button("Options", systemImage: "ellipsis", action: { print("options")})
-                        .labelStyle(.iconOnly)
-                    
-                    Button("Share", systemImage: "square.and.arrow.up", action: { print("share")})
-                        .labelStyle(.iconOnly)
+                .padding()
+                .toolbar{
+                    ToolbarItemGroup{
+                        Button("Options", systemImage: "ellipsis", action: { print("options")})
+                            .labelStyle(.iconOnly)
+                        
+                        Button("Share", systemImage: "square.and.arrow.up", action: { print("share")})
+                            .labelStyle(.iconOnly)
+                    }
                 }
             }
         }
