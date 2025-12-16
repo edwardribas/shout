@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A230AC282EEF654A00165ADF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A230AC272EEF654700165ADF /* README.md */; };
+		A261B8BA2EF0EA48003ACA64 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = A261B8B92EF0EA48003ACA64 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A230AC082EEF2C5300165ADF /* shout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A230AC272EEF654700165ADF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = README.md; sourceTree = "<group>"; };
+		A261B8B92EF0EA48003ACA64 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -37,6 +39,7 @@
 		A230ABFF2EEF2C5300165ADF = {
 			isa = PBXGroup;
 			children = (
+				A261B8B92EF0EA48003ACA64 /* .gitignore */,
 				A230AC272EEF654700165ADF /* README.md */,
 				A230AC0A2EEF2C5300165ADF /* shout */,
 				A230AC092EEF2C5300165ADF /* Products */,
@@ -115,6 +118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A261B8BA2EF0EA48003ACA64 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
