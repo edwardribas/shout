@@ -11,9 +11,14 @@ struct SongbookView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                Text("Songbook")
+                VStack{
+                    Text("Not implemented")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding()
             }
-            .padding()
+            .navigationTitle("Songbook")
+            .navigationSubtitle("Discover new songs to sing")
         }
     }
 }

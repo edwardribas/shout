@@ -11,9 +11,14 @@ struct FeedView: View {
     var body: some View {
         NavigationStack{
             ScrollView{
-                Text("Feed")
+                VStack{
+                    Text("Not implemented")
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                }
+                .padding()
             }
-            .padding()
+            .navigationTitle("Feed")
+            .navigationSubtitle("See your friend's activity")
         }
     }
 }
