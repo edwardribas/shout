@@ -9,9 +9,11 @@ import SwiftUI
 
 struct SongbookView: View {
     var body: some View {
-        ScrollView{
-            Text("Songbook")
+        NavigationStack{
+            ScrollView{
+                Text("Songbook")
+            }
+            .padding()
         }
-        .padding()
     }
 }

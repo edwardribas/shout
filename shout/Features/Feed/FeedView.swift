@@ -9,9 +9,11 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        ScrollView{
-            Text("Feed")
+        NavigationStack{
+            ScrollView{
+                Text("Feed")
+            }
+            .padding()
         }
-        .padding()
     }
 }

@@ -18,7 +18,7 @@ struct ProfileView: View {
     
     var body: some View {
         NavigationStack{        
-            ScrollView(.vertical) {
+            ScrollView{
                 VStack(spacing: 20) {
                     HStack(alignment: .center, spacing: 20){
                         AsyncImage(url: pictureUrl){ image in
